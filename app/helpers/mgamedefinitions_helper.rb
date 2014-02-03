@@ -1,0 +1,2 @@
+module MgamedefinitionsHelper
+end

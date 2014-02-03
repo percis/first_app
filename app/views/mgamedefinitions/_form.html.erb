@@ -1,0 +1,121 @@
+<%= form_for(@mgamedefinition) do |f| %>
+  <% if @mgamedefinition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mgamedefinition.errors.count, "error") %> prohibited this mgamedefinition from being saved:</h2>
+
+      <ul>
+      <% @mgamedefinition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <table>
+ 	<tr>
+ 		<th><%= f.label :formatid %></th>
+ 		<th> &nbsp;<%= f.label :typeid %></th>
+ 		<th> &nbsp;<%= f.label :min_players %></th>
+ 		<th> &nbsp;<%= f.label :max_players %></th>
+ 		<th> &nbsp;<%= f.label :entryfee %></th>
+ 		<th> &nbsp;<%= f.label :drop_pts %></th>
+ 		<th> &nbsp;<%= f.label :maxscore %></th>
+ 		<th> &nbsp;<%= f.label :usebot %></th>
+ 		<th> &nbsp;<%= f.label :note %></th>
+ 		<th> &nbsp;<%= f.label :min_ante %></th>
+ 		<th> &nbsp;<%= f.label :max_ante %></th>
+ 		<th> &nbsp;<%= f.label :min_buyin %></th>
+ 		<th> &nbsp;<%= f.label :max_buyin %></th>
+ 		<th> &nbsp;<%= f.label :min_stake %></th>
+ 		<th> &nbsp;<%= f.label :max_stake %></th>
+ 		<th> &nbsp;<%= f.label :gametimer %></th>
+ 		
+ 	</tr> 
+ 	<tr>
+ 		<td><%= f.number_field :formatid %></td>
+ 		<td><%= f.number_field :typeid %></td>
+ 		<td><%= f.number_field :min_players %></td>
+ 		<td><%= f.number_field :max_players %></td>
+ 		<td><%= f.number_field :entryfee %></td>
+ 		<td><%= f.number_field :drop_pts %></td>
+ 		<td><%= f.number_field :maxscore %></td>
+ 		<td><%= f.number_field :usebot %></td>
+ 		<td><%= f.text_field :note %></td>
+ 		<td><%= f.number_field :min_ante %></td>
+ 		<td><%= f.number_field :max_ante %></td>
+ 		<td><%= f.number_field :min_buyin %></td>
+ 		<td><%= f.number_field :max_buyin %></td>
+ 		<td><%= f.number_field :min_stake %></td>
+ 		<td><%= f.number_field :max_stake %></td>
+ 		<td><%= f.number_field :gametimer %></td>
+ 	</tr>
+ 	
+ </table>
+  <!-- <div class="field">
+    <%= f.label :formatid %><br />
+    <%= f.number_field :formatid %>
+  </div>
+  <div class="field">
+    <%= f.label :typeid %><br />
+    <%= f.number_field :typeid %>
+  </div>
+  <div class="field">
+    <%= f.label :min_players %><br />
+    <%= f.number_field :min_players %>
+  </div>
+  <div class="field">
+    <%= f.label :max_players %><br />
+    <%= f.number_field :max_players %>
+  </div>
+  <div class="field">
+    <%= f.label :entryfee %><br />
+    <%= f.text_field :entryfee %>
+  </div>
+  <div class="field">
+    <%= f.label :drop_pts %><br />
+    <%= f.number_field :drop_pts %>
+  </div>
+  <div class="field">
+    <%= f.label :maxscore %><br />
+    <%= f.number_field :maxscore %>
+  </div>
+  <div class="field">
+    <%= f.label :usebot %><br />
+    <%= f.number_field :usebot %>
+  </div>
+  <div class="field">
+    <%= f.label :note %><br />
+    <%= f.text_field :note %>
+  </div>
+  <div class="field">
+    <%= f.label :min_ante %><br />
+    <%= f.number_field :min_ante %>
+  </div>
+  <div class="field">
+    <%= f.label :max_ante %><br />
+    <%= f.number_field :max_ante %>
+  </div>
+  <div class="field">
+    <%= f.label :min_buyin %><br />
+    <%= f.number_field :min_buyin %>
+  </div>
+  <div class="field">
+    <%= f.label :max_buyin %><br />
+    <%= f.number_field :max_buyin %>
+  </div>
+  <div class="field">
+    <%= f.label :min_stake %><br />
+    <%= f.number_field :min_stake %>
+  </div>
+  <div class="field">
+    <%= f.label :max_stake %><br />
+    <%= f.number_field :max_stake %>
+  </div>
+  <div class="field">
+    <%= f.label :gametimer %><br />
+    <%= f.number_field :gametimer %>
+  </div> -->
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

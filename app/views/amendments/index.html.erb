@@ -1,0 +1,29 @@
+<h1>Listing amendments</h1>
+
+<table>
+  <tr>
+    <th>C code</th>
+    <th>C name</th>
+    <th>Tran</th>
+    <th>Priority</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @amendments.each do |amendment| %>
+  <tr>
+    <td><%= amendment.c_code %></td>
+    <td><%= amendment.c_name %></td>
+    <td><%= amendment.tran_id %></td>
+    <td><%= amendment.priority %></td>
+    <td><%= link_to 'Show', amendment %></td>
+    <td><%= link_to 'Edit', edit_amendment_path(amendment) %></td>
+    <td><%= link_to 'Destroy', amendment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Amendment', new_amendment_path %>

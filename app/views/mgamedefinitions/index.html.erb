@@ -1,0 +1,53 @@
+<h1>Listing mgamedefinitions</h1>
+
+<table>
+  <tr>
+    <th>Formatid</th>
+    <th>Typeid</th>
+    <th>Min players</th>
+    <th>Max players</th>
+    <th>Entryfee</th>
+    <th>Drop pts</th>
+    <th>Maxscore</th>
+    <th>Usebot</th>
+    <th>Note</th>
+    <th>Min ante</th>
+    <th>Max ante</th>
+    <th>Min buyin</th>
+    <th>Max buyin</th>
+    <th>Min stake</th>
+    <th>Max stake</th>
+    <th>Gametimer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mgamedefinitions.each do |mgamedefinition| %>
+  <tr>
+    <td><%= mgamedefinition.formatid %></td>
+    <td><%= mgamedefinition.typeid %></td>
+    <td><%= mgamedefinition.min_players %></td>
+    <td><%= mgamedefinition.max_players %></td>
+    <td><%= mgamedefinition.entryfee %></td>
+    <td><%= mgamedefinition.drop_pts %></td>
+    <td><%= mgamedefinition.maxscore %></td>
+    <td><%= mgamedefinition.usebot %></td>
+    <td><%= mgamedefinition.note %></td>
+    <td><%= mgamedefinition.min_ante %></td>
+    <td><%= mgamedefinition.max_ante %></td>
+    <td><%= mgamedefinition.min_buyin %></td>
+    <td><%= mgamedefinition.max_buyin %></td>
+    <td><%= mgamedefinition.min_stake %></td>
+    <td><%= mgamedefinition.max_stake %></td>
+    <td><%= mgamedefinition.gametimer %></td>
+    <td><%= link_to 'Show', mgamedefinition %></td>
+    <td><%= link_to 'Edit', edit_mgamedefinition_path(mgamedefinition) %></td>
+    <td><%= link_to 'Destroy', mgamedefinition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mgamedefinition', new_mgamedefinition_path %>
